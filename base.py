@@ -8,3 +8,6 @@ class Astride:
 
     def qualidades(self):
         return "Muito linda e gostosa!"
+    
+    def caracteristicas(self):
+        return "Muito inteligente, e carinhosa tambem!"
