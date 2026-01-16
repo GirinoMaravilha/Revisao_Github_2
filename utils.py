@@ -1,5 +1,9 @@
+"""
+Docstring para o módulo 'utils.py'.
+"""
 
-#Funções Auxiliares
+
+# Funções Auxiliares
 
 def cria_matriz(colunas:int,linhas:int) -> list[list[int]]:
 
