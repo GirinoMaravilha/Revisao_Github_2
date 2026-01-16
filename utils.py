@@ -32,4 +32,13 @@ def cria_matriz(colunas:int,linhas:int) -> list[list[int]]:
     return lista_matriz
 
 
+# Função Main
+
+def main():
+    pass
+
+
+if __name__ == "__main__":
+    main()
+
 
