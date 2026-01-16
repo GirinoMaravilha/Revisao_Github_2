@@ -17,9 +17,6 @@ def cria_matriz(colunas:int,linhas:int) -> list[list[int]]:
 
     ### Código ###
 
-    #Vamos calcular a quantidade total de items da matriz
-    total_valores = colunas * linhas
-
     #Vamos realizar a iteração para a criação da matriz
     for linha in range(linhas):
         lista_matriz.append([])
