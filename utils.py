@@ -35,7 +35,10 @@ def cria_matriz(colunas:int,linhas:int) -> list[list[int]]:
 # Função Main
 
 def main():
-    pass
+    
+    matriz = cria_matriz(3,3)
+    for linha in matriz:
+        print(linha)
 
 
 if __name__ == "__main__":
