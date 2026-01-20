@@ -5,6 +5,25 @@ Docstring para o módulo 'utils.py'.
 
 # Funções Auxiliares
 
+def parser_arquivo(abs_path:str) -> str:
+
+    ### Variáveis ###
+
+    # Nome do arquivo retirado do caminha absoluto 
+    nome_arquivo = ""
+
+    ### Código ###
+
+    # Retirando ultimo valor do caminho absoluto
+    nome_arquivo = abs_path.split("/")[::-1][0]
+
+    # Verificando se é um arquivo
+    if "." in nome_arquivo:
+        return nome_arquivo
+    else:
+        raise ValueError ("Valor passado não é um arquivo")
+
+
 def cria_matriz(colunas:int,linhas:int) -> list[list[int]]:
 
     ### Variáveis ###
