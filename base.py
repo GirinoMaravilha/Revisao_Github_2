@@ -6,10 +6,19 @@ Módulo teste para a revisão do GitHub
 # Classes
 
 class Elfa:
+    """
+    Docstring da classe 'Elfa', a esposa do Lucas deus da guerra.
+    """
     def __init__(self):
+        """
+        Método inicializador da classe Elfa.
+        """
         self.nome = "Elfa"
     
     def qualidades(self):
+        """
+        Método que mostra as qualidades da Elfa.
+        """
         return "Calma, Carinhosa e muito doce e bonita."
 
 
