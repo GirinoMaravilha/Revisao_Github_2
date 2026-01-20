@@ -7,6 +7,19 @@ Docstring para o módulo 'utils.py'.
 
 def parser_arquivo(abs_path:str) -> str:
 
+    """
+    Módulo para realizar o parsing de caminhos absolutos e retirar o nome do arquivo.
+
+    Args:
+        abs_path(str): Caminho absoluto do arquivo.
+
+    Returns:
+        str: Nome do arquivo.
+    
+    Raises:
+        ValueError: Exceção levantada quando o caminho absoluto não aponta para um arquivo.
+    """
+
     ### Variáveis ###
 
     # Nome do arquivo retirado do caminha absoluto 
