@@ -65,9 +65,11 @@ def cria_matriz(colunas:int,linhas:int) -> list[list[int]]:
 
 def main():
 
+    # Depuração da função 'parser_arquivo'
     a = parser_arquivo("dir1/dir2/texto.txt")
     print(a)
     
+    # Depuração da função '
     matriz = cria_matriz(3,3)
     for linha in matriz:
         print(linha)
