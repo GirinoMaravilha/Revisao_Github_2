@@ -12,5 +12,7 @@ def request_handler():
     """
     return "Ola eu sou o request handler"
 
-a = base.Astride()
-a.qualidades()
+
+def main():
+    a = base.Astride()
+    a.qualidades()
