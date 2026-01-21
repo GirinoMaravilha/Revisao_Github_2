@@ -16,3 +16,7 @@ def request_handler():
 def main():
     a = base.Astride()
     a.qualidades()
+
+
+if __name__ == "__main__":
+    main()
