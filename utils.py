@@ -5,6 +5,11 @@ Docstring para o módulo 'utils.py'.
 
 # Funções Auxiliares
 
+
+def retorna_n(string:str) -> int:
+    return len(string)
+
+
 def parser_arquivo(abs_path:str) -> str:
 
     """
