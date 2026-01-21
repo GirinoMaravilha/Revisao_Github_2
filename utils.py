@@ -8,12 +8,10 @@ Docstring para o módulo 'utils.py'.
 
 def retorna_n(string:str) -> int:
     """
-    Docstring for retorna_n
-    
-    :param string: Description
-    :type string: str
-    :return: Description
-    :rtype: int
+    Função que retorna a quantidade de caracteres de uma string.
+
+    Args:
+        string(str): String comum.
     """
 
     # Retornando a quantidade de caracteres da string
