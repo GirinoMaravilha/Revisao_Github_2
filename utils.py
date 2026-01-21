@@ -15,6 +15,8 @@ def retorna_n(string:str) -> int:
     :return: Description
     :rtype: int
     """
+
+    # Retornando a quantidade de caracteres da string
     return len(string)
 
 
