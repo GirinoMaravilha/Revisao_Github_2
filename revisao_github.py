@@ -1,5 +1,6 @@
 import base
 
+# String que se refere ao Lucas
 print("Ola meu nome é Lucas")
 print("A Astride é gata!")
 
