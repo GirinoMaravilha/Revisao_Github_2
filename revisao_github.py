@@ -1,3 +1,8 @@
+"""
+Docstring do módulo 'revisao_github'
+"""
+
+
 import base
 
 # String que se refere ao Lucas
