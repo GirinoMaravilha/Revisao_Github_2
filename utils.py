@@ -38,6 +38,16 @@ def parser_arquivo(abs_path:str) -> str:
 
 
 def cria_matriz(colunas:int,linhas:int) -> list[list[int]]:
+    """
+    Docstring da função cria_matriz.
+
+    Args:
+        colunas(int): Valor das colunas da matriz.
+        linhas(int): Valor das linhas da matriz.
+
+    Returns:
+        list: Matriz gerada com a quantidade de colunas e linhas especificada pelo usuário.
+    """
 
     ### Variáveis ###
 
