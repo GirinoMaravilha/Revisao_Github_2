@@ -7,6 +7,14 @@ Docstring para o módulo 'utils.py'.
 
 
 def retorna_n(string:str) -> int:
+    """
+    Docstring for retorna_n
+    
+    :param string: Description
+    :type string: str
+    :return: Description
+    :rtype: int
+    """
     return len(string)
 
 
