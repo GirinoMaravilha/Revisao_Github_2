@@ -23,6 +23,9 @@ class Elfa:
 
 
 class Astride:
+    """
+    Docstring for Astride
+    """
     def __init__(self):
         self.nome = "Astride Hofferson"
 
