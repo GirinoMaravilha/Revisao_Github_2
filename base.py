@@ -30,6 +30,11 @@ class Astride:
         self.nome = "Astride Hofferson"
 
     def qualidades(self):
+        """
+        Docstring for qualidades
+        
+        :param self: Description
+        """
         return "Muito linda e gostosa!"
     
     def caracteristicas(self):
