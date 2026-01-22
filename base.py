@@ -2,19 +2,20 @@
 Módulo teste para a revisão do GitHub
 """
 
-
 # Classes
+
 
 class Elfa:
     """
     Docstring da classe 'Elfa', a esposa do Lucas deus da guerra.
     """
+
     def __init__(self):
         """
         Método inicializador da classe Elfa.
         """
         self.nome = "Elfa"
-    
+
     def qualidades(self):
         """
         Método que mostra as qualidades da Elfa.
@@ -26,22 +27,24 @@ class Astride:
     """
     Docstring for Astride
     """
+
     def __init__(self):
         self.nome = "Astride Hofferson"
 
     def qualidades(self):
         """
         Docstring for qualidades
-        
+
         :param self: Description
         """
         return "Muito linda e gostosa!"
-    
+
     def caracteristicas(self):
         return "Muito inteligente, e carinhosa tambem!"
-    
+
 
 # Função Main
+
 
 def main():
     a = Astride()
