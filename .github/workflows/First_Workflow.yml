@@ -1,0 +1,39 @@
+#Nome
+name: Pipeline CI de teste
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  testando_runner:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Testando a CLI do sistema
+        run: |
+          echo "Usuário:"
+          whoami
+          echo "Diretório local:"
+          pwd
+
+      - name: Configurando o Python
+        uses: actions/setup-python@v6.2.0
+        with:
+          python-version: '3.13.6'
+
+      - name: Verificando a versão do Python
+        run: |
+          python --version
+          which python
+            
+  
+    
+
+    
+      
