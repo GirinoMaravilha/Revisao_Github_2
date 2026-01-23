@@ -1,0 +1,33 @@
+# Nome pipeline CI
+name: CI Lint and Tests
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+# Executa lint do código utilizando o Ruff
+jobs:
+  lint_ruff:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Criando ambiente Python
+        uses: actions/setup-python@v6.2.0
+        with:
+          python-version: '3.13.6'
+
+      - name: Baixando o Ruff
+        run: pip install ruff
+
+      - name: Clonando Repositorio no Runner
+        uses: actions/checkout@v6.0.2
+
+      - name: Executando linting do Ruff
+        run: ruff check .
+        
+        
+        
+  
+    
