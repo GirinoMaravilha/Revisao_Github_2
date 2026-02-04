@@ -21,7 +21,7 @@ jobs:
           python-version: "3.13"
 
       - name: Instalando dependencias
-        run: pip install selenium bs4 aiohttp pytests
+        run: pip install selenium bs4 aiohttp pytest
 
       - name: Fianlizando  Pipeline
         run: echo "Pipeline CI Finalizada!"
