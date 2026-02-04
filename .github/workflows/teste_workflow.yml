@@ -1,0 +1,31 @@
+# Workflow para estudar CI
+name: Estudo de CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v6.0.2
+    
+      - name: Configurando Python
+        uses: actions/setup-python@v6.2.0
+        with:
+          python-version: "3.13"
+
+      - name: Instalando dependencias
+        run: pip install selenium bs4 aiohttp pytests
+
+      - name: Fianlizando  Pipeline
+        run: echo "Pipeline CI Finalizada!"
+
+        
+      
+    
