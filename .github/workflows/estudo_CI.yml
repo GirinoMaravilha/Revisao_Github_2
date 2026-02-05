@@ -38,7 +38,6 @@ jobs:
         run: echo 'Experimental é True'
 
       - name: Quebrando o código
-        continue-on-error: true
         run: exit 1
 
       - name: Testando o 'if' avançado
