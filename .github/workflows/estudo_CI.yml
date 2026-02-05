@@ -11,7 +11,7 @@ on:
 jobs:
   estudo_condicional:
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         os: [windows-latest,ubuntu-latest]
         include:
