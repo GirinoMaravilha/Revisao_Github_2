@@ -43,6 +43,6 @@ jobs:
       - name: Testando o 'if' avançado
         if: failure() && matrix.experimental == true
         shell: bash
-        run: echo "Conseguimos ativar o 'failure' da condicional 'if' do arquivo YAML'
+        run: echo "Conseguimos ativar o 'failure' da condicional 'if' do arquivo YAML"
       
     
