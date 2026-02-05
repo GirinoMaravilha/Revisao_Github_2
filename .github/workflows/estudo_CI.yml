@@ -24,7 +24,7 @@ jobs:
         if: matrix.os == 'windows-latest'
         env:
           shell: pwsh
-        run: Write-Host "Rodando no WIndows com o shell $shell'
+        run: Write-Host "Rodando no WIndows com o shell $shell"
 
       - name: Echo no Linux
         if: matrix.os == 'ubuntu.latest'
