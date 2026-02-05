@@ -27,7 +27,7 @@ jobs:
         run: Write-Host "Rodando no WIndows com o shell $shell"
 
       - name: Echo no Linux
-        if: matrix.os == 'ubuntu.latest'
+        if: matrix.os == 'ubuntu-latest'
         env:
           shell: bash
         run: echo "Rodando no Linux com o shell $shell"
