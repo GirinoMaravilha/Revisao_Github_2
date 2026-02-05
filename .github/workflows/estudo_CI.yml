@@ -1,0 +1,39 @@
+# Estudo de CI Workflow
+name: Estudo de CI Workflow
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch: 
+
+jobs:
+  estudo_condicional:
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [windows-latest,ubuntu-latest]
+        include:
+          - os: windows-latest
+            experimental: true
+    runs-on: ${{matrix.os}} 
+
+    steps:
+      - name: Echo no Windows
+        if: matrix.os == 'windows-latest'
+        env:
+          shell: pwsh
+        run: Write-Host "Rodando no WIndows com o shell $shell'
+
+      - name: Echo no Linux
+        if: matrix.os == 'ubuntu.latest'
+        env:
+          shell: bash
+        run: echo "Rodando no Linux com o shell $shell"
+
+      - name: Verificando variavel 'Experimental'
+        if: matrix.experimental == true
+        run: echo 'Experimental é True'
+      
+    
