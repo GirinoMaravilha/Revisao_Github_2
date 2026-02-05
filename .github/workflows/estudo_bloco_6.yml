@@ -1,0 +1,60 @@
+# Script YAML para estuda o Bloco 6
+
+name: Workflow de testes e lint para esutdo do bloco 6
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+
+  lint:
+    name: Lint(Ruff)
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6.0.2
+
+      - uses: actions/setup-python@v6.2.0 
+        with:
+          python-version: "3.13"
+
+      - name: Instalando o Ruff
+        run: pip install ruff
+
+      - name: Executando o Ruff
+        run: ruff check .
+
+  mock_test:
+    name: Teste do Commit
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6.0.2
+
+      - uses: actions/setup-python@v6.2.0 
+        with:
+          python-version: "3.13"
+
+      - name: Instalando dependências
+        run: pip install selenium bs4 aiohttp pytest
+
+      - name: Rodando testes
+        shell: bash
+        run: echo "Testes estão sendo executados..."
+
+  build:
+    name: Build Final
+    runs-on: ubuntu-latest
+    needs: [lint,mock_test]
+
+    steps:
+      - uses: actions/checkout@v6.0.2
+
+      - name: Construindo o projeto
+        run: echo "A build foi realizada!"
+      
+      
