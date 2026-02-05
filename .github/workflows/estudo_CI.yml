@@ -36,5 +36,13 @@ jobs:
       - name: Verificando variavel 'Experimental'
         if: matrix.experimental == true
         run: echo 'Experimental é True'
+
+      - name: Quebrando o código
+        run: exit 1
+
+      - name: Testando o 'if' avançado
+        if: failure() && matrix.experimental == true
+        shell: bash
+        run: echo "Conseguimos ativar o 'failure' da condicional 'if' do arquivo YAML'
       
     
