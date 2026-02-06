@@ -27,6 +27,7 @@ jobs:
         uses: actions/upload-artifact@v6.0.0
         with:
           name: pytest-report.xml
+          path: .
           
         
         
