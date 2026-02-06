@@ -4,7 +4,11 @@ Docstring for tests.test_base
 
 
 def test_beleza_astride(qualidade:str) -> str:
-    return f"A astride é muito {qualidade}"
+
+    qualidades_astride = ["gata","gostosa","bonita"]    
+    assert qualidades_astride[2] == qualidade
 
 def test_beleza_elfa(qualidade:str) -> str:
-    return f"A Elfa é muito {qualidade}"
+     
+     qualidades_elfa = ["linda","doce","carinhosa","bonita"]
+     assert qualidades_elfa[3] == qualidade
