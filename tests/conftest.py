@@ -5,4 +5,4 @@ import pytest
 
 @pytest.fixture
 def qualidade() -> str:
-    return "Bonita"
+    return "bonita"
