@@ -2,7 +2,7 @@
 Docstring do módulo 'revisao_github'
 """
 
-import base
+import src.base as base
 
 # String que se refere ao Lucas
 print("Ola meu nome é Lucas")
