@@ -22,6 +22,9 @@ jobs:
       - name: Instalando pytest
         run: pip install pytest
 
+      - name: Instalando plugin para gerar relatorio HTML
+        run: pip install pytest-html
+
       - name: Rodando pytest para o relatorio
         run: pytest --html=report.html --self-contained-html
 
