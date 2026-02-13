@@ -17,6 +17,9 @@ jobs:
         with:
           python-version: '3.13'
 
+      - name: Configurando ambiente para criaçao da build
+        run: python3.13 -m pip install build
+
       - name: Gerando a build
         run: python -m build
 
