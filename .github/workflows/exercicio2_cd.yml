@@ -1,0 +1,30 @@
+# Exercício 2
+name: Estudo do exercicio 2
+
+on:
+  workflow_dispatch:
+
+jobs:
+  gerando_build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Upando repositorio para o runner
+        uses: actions/checkout@v6.0.2
+
+      - name: Preparando ambiente python
+        uses: actions/setup-python@v6.2.0
+        with:
+          python-version: '3.13'
+
+      - name: Gerando a build
+        run: python -m build
+
+      - name: Upando pacote da build
+        uses: actions/upload-artifact@v6.0.0
+        with:
+          name: package
+          path: dist/
+        
+
+      
