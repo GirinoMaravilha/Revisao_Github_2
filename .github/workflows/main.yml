@@ -1,0 +1,34 @@
+# Estudo revisão exercícios de CD
+name: Estudo de CDelivery
+
+on:
+  workflow_dispatch:
+  
+
+jobs:
+  gerando_artefato:
+    name: Exercício de gerar artefato
+    runs-on: ububuntu-latest
+    
+    steps:
+      - name: Upando repositorio para o runner
+        uses: actions/checkout@v6.0.2
+        
+      - name: Configurando python 
+        uses: actions/setup-python@v6.2.0
+        with:
+          pythin-version: '3.13'
+
+      - name: Instalando pytest
+        run: pip install pytest
+
+      - name: Rodando pytest para o relatorio
+        run: pytest --html=report.html --self-contained-html
+
+      - name: Upando o o artefato para a aba Artifacts
+        uses: actions/upload-artifact@v6.0.0
+        with:
+          name: report.html
+          path: .
+  
+  
