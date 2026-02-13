@@ -7,6 +7,10 @@ name = "revisao_github"
 version = "1.0.0"
 dependencies = ["requests"]
 
+[tool.setuptools]
+packages = ["revisao_github"]
+
+
 [project.optional-dependencies]
 dev = [
     "pytest",
