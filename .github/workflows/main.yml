@@ -8,7 +8,7 @@ on:
 jobs:
   gerando_artefato:
     name: Exercício de gerar artefato
-    runs-on: ububuntu-latest
+    runs-on: ubuntu-latest
     
     steps:
       - name: Upando repositorio para o runner
