@@ -14,4 +14,4 @@ jobs:
   teste:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Estudando o workflow_dispatch"
+      - run: echo "Estudando o workflow_dispatch com o valor de ambiente ${{inputs.environment}}"
