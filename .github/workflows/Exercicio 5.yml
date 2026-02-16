@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Upando repositório
-        uses: actions/upload-artifact@v6.0.0
+        uses: actions/checkout@v6.0.2
 
       - name: Configurando ambiente python
         uses: actions/setup-python@v6.2.0
