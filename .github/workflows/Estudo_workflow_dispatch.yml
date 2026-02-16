@@ -10,12 +10,9 @@ on:
         required: true
         type: string
       environment:  
-        description: "Ambiente"
+        description: "Escolha o ambiente"
         required: true
-        type: choice
-        options:
-          - staging
-          - production
+        type: environment
       run_tests:
         description: "Executar testes antes?"
         type: boolean
