@@ -5,13 +5,28 @@ name: Estudando workflow_dispatch
 on:
   workflow_dispatch:
     inputs:
-      environment:  
-        description: 'Ambiente'
+      version:
+        description: "Versão do projeto"
         required: true
-        default: 'production'
+        type: string
+      environment:  
+        description: "Ambiente"
+        required: true
+        type: choice
+        options:
+          - staging
+          - production
+      run_tests:
+        description: "Executar testes antes?"
+        type: boolean
+        default: true
+      
 
 jobs:
   teste:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Estudando o workflow_dispatch com o valor de ambiente ${{inputs.environment}}"
+
+        if: ${{inputs.run_tests}}
+      - run: echo "O input ativou a depuração do repositório com o pytest"
