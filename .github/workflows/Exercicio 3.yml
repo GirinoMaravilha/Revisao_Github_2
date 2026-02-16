@@ -38,10 +38,11 @@ jobs:
         uses: actions/download-artifact@v7.0.0
         with:
           name: package
+          path: package
 
       - name: Listando pacote
         run: ls package
 
       - name: Validando nome da versão
-        run: ls dist/*.whl
+        run: ls package/*.whl
       
