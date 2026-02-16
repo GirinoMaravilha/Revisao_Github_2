@@ -1,0 +1,17 @@
+# Estudando sobre workflow_dispatch
+
+name: Estudando workflow_dispatch
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:  
+        description: 'Ambiente'
+        required: true
+        default: 'production'
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Estudando o workflow_dispatch"
