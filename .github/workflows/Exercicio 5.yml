@@ -13,6 +13,8 @@ jobs:
 
       - name: Configurando ambiente python
         uses: actions/setup-python@v6.2.0
+        with:
+          python-version: '3.13'
 
       - name: Instalando ddependencias
         run: python3.13 pip install selenium requests bs4
