@@ -17,7 +17,7 @@ jobs:
           python-version: '3.13'
 
       - name: Instalando ddependencias
-        run: python3.13 pip install selenium requests bs4
+        run: python3.13 -m pip install selenium requests bs4
 
       - name: Gerando erro
         run: exit 1
