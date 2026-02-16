@@ -20,17 +20,19 @@ jobs:
         run: python3.13 -m pip install selenium requests bs4
 
       - name: Gerando erro
+        id: erro_step
         run: exit 1
         continue-on-error: true
 
       - name: Gerando logs de depuração para caso o codigo falhar
-        if: failure()
+        if: steps.erro_step.outcome == 'failure'
         run: |
           pip freeze > pip_freeze.txt
           env > env.txt
           ls -R > tree.txt
 
       - name: Upando relatorios em um artefato
+        if: steps.erro_step.outcome == 'failure'
         uses: actions/upload-artifact@v6.0.0
         with:
           name: debug_logs
