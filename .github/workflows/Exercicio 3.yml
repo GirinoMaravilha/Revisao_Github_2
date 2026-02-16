@@ -40,7 +40,7 @@ jobs:
           name: package
 
       - name: Listando pacote
-        run: ls package
+        run: ls dist/package
 
       - name: Validando nome da versão
         run: ls dist/*.whl
