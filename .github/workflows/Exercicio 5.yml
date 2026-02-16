@@ -1,0 +1,37 @@
+# Exercicio 5
+name: Realizando exercicio 5
+
+on:
+  workflow_dispatch:
+
+jobs:
+  gerando_erro:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upando repositório
+        uses: actions/upload-artifact@v6.0.0
+
+      - name: Configurando ambiente python
+        uses: actions/setup-python@v6.2.0
+
+      - name: Instalando ddependencias
+        run: python3.13 pip install selenium requests bs4
+
+      - name: Gerando erro
+        run: exit 1
+        continue-on-error: true
+
+      - name: Gerando logs de depuração para caso o codigo falhar
+        if: failure()
+        run: |
+          pip freeze > pip_freeze.txt
+          env > env.txt
+          ls -R > tree.txt
+
+      - name: Upando relatorios em um artefato
+        uses: actions/upload-artifact@v6.0.0
+        with:
+          name: debug_logs
+          path: "*.txt"
+      
+      
