@@ -1,0 +1,24 @@
+# Exercício 6 Prova Final CI/CD
+name: Exercício 6
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  executando_exercicio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fazendo upload od repositório
+        uses: actions/checkout@v6.0.2
+
+      - name: Configurando python
+        uses: actions/setup-python@v6.2.0
+        with:
+          python-version: '3.13'
+
+      - name: Instalando dependências
+        run: python3.13 -m pip install .[dev]
+
+      - name: Rodando o pytest
+        run: pytest
