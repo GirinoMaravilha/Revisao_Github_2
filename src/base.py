@@ -1,7 +1,6 @@
 """
 Módulo teste para a revisão do GitHub
 """
-import random
 
 # Classes
 
@@ -19,8 +18,6 @@ class Elfa:
         self.nome = "Elfa"
 
     def qualidades(self):
-
-        v = 10
 
         """
         Método que mostra as qualidades da Elfa.
