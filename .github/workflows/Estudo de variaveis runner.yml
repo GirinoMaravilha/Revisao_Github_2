@@ -1,0 +1,20 @@
+# Estudo sobre variável no runner indo para o github actions
+name: Estudo de variáveis no runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  estudo_variaveis:
+    runs-on: ubuntu-latest
+    env:
+      VARIAVEL_TESTE: ""
+      
+    steps:
+      - name: Criando variável no runner e passando para o ambiente GITHUB ACTIONS
+        run: echo "VARIAVEL_TESTE=OLA TUDO BEM" >> $GITHUB_ENV
+
+      - name: Verificar valor da variável nesse step
+        run: echo "o VALOR É ${{env.VARIAVEL_TESTE}}"
+
+        
