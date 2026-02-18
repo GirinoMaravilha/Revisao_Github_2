@@ -1,0 +1,24 @@
+# Estudo de variáveis entre jobs
+name: Estudo de variáveis entre jobs
+
+on:
+  workflow_dispatch:
+
+jobs:
+  estudo_variaveis:
+    runs-on: ubuntu-latest
+    outputs:
+      VARIAVEL_TEST: ${{steps.definir.outputs.VARIAVEL_TESTE}}
+    steps:
+      - name: Criando variável que vai para o outro job
+        id: definir
+        run: echo "VARIAVEL_TESTE= OLA TUDO BEM?" >> $GITHUB_OUTPUT
+
+  recebendo_variavel:
+    runs-on: ubuntu-latest
+    needs: estudo_variaveis
+    steps:
+      - name: Recebendo variável e mostrando valor
+        env:
+          variavel_teste: ${{needs.estudo_variaveis.outputs.VARIAVEL_TEST}}
+        run: echo "Valor da variável do outro job => ${{env.variavel_teste}} "
