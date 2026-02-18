@@ -4,6 +4,9 @@ Docstring para o módulo 'utils.py'.
 
 # Funções Auxiliares
 
+def gera_frase():
+    return "ola sou uma frase"
+
 
 def retorna_n(string: str) -> int:
     """
