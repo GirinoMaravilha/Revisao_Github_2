@@ -5,6 +5,7 @@ import random
 
 # Classes
 
+#Comentário criado explicitamente para ativar o workflow do exercicio 6 da prova final
 
 class Elfa:
     """
