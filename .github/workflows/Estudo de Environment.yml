@@ -1,0 +1,32 @@
+# Treinando Environment e Variáveis não locais
+name: Treino de uso do Environment e Variáveis
+
+on:
+  workflow_dispatch:
+    inputs:
+      Ambiente:
+        description: "Escolha o Environment"
+        required: true
+        type: environment
+
+jobs:
+  environment:
+    #id: job_environment
+    runs-on: ubuntu-latest
+    environment: ${{inputs.Ambiente}}
+
+    steps:
+      - name: Devolvendo nome do Environment escolhido
+        run: echo 'O environment que estamos utilizando é o ${{inputs.Ambiente}}'
+
+      - name: Mostrando valor de variável secrets
+        env: 
+          API_KEY: ${{secrets.API_KEY}}
+        run: echo 'A variável secretes seria a API_KEY de valor => ${{env.API_KEY}}'
+
+      - name: Mostrando valor de variável local
+        env:
+          PROJECT_VERSION: ${{vars.PROJECT_VERSION}}
+        run: echo 'A variável local seria a PROJECT_VERSION de valor => ${{env.PROJECT_VERSION}}'
+    
+    
