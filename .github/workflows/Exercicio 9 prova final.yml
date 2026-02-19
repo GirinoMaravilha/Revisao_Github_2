@@ -1,0 +1,32 @@
+# Exercicio 9
+name: Exercício 9
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions: read-all
+    steps:
+      - name: Upando repositório
+        uses: actions/checkout@v6.0.2
+
+      - name: Configurando python
+        uses: actions/setup-python@v6.2.0
+        with:
+          python-version: '3.13'
+
+      - name: Instalando biblioteca build
+        run: python3.13 -m pip install build
+
+      - name: Gerando a build do projeto
+        run: python3.13 -m build
+
+      - name: Fazendo deploy na aba Artifacts
+        uses: actions/upload-artifact@v6.0.0
+        with:
+          name: package
+          path: dist/
+          
