@@ -5,6 +5,7 @@ Módulo teste para a revisão do GitHub
 # Classes
 
 #Comentário criado explicitamente para ativar o workflow do exercicio 6 da prova final
+#Comentário criado explicitamente para ativar o workflow do exercicio 9 da prova final
 
 class Elfa:
     """
